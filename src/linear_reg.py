@@ -1,6 +1,6 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error, r2_error
+from sklearn.metrics import mean_squared_error, r2_score
 
 def temp_model(df):
     X = df[["Year","Month"]]
@@ -26,4 +26,3 @@ def temp_model(df):
     print("R-squared:", r2)
 
     return model
-    

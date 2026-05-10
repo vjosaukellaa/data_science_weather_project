@@ -1,4 +1,4 @@
-import matplotlib.pytplot as pytplot
+import matplotlib.pyplot as plt 
 
 def temp_vs_t(df):
 
