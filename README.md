@@ -12,8 +12,6 @@ The dataset was obtained from [National Centers for Environmental Information](h
 - Matplotlib
 - scikit-learn
 
-## Running the Project
-
 ## Authors
 - Vjosa Ukella, vu33
 - Abigail Villacorta, aev64
