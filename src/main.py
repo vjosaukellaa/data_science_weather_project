@@ -18,6 +18,6 @@ monthly_temp(df)
 #Linear regression model
 model, Y_test, predictions, dates_test = temp_model(df)
 #Comparing actual and predicted temperatures
-act_vs_pred(Y_test, predictions, dates_test)
+act_vs_pred(Y_test, predictions)
 #Correlation heat map
 corr_heatmap(df)

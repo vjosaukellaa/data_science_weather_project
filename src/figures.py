@@ -45,41 +45,20 @@ def monthly_temp(df):
 
     plt.show()
 
-def act_vs_pred(Y_test, predictions, dates_test):
-    #Creating dataframe including the dates, actual temperature values, and predicted temperature values
-    results = pd.DataFrame({
-        "Date": dates_test,
-        "Actual": Y_test,
-        "Predicted": predictions
-    })
+def act_vs_pred(Y_test, predictions):
+    plt.figure(figsize=(8,5))
 
-    #Sorting by date
-    results = results.sort_values("Date")
+    plt.scatter(Y_test, predictions, alpha=0.7)
 
-    plt.figure(figsize=(12,5))
-
-    #Plotting the actual values linearly
     plt.plot(
-        results["Date"],
-        results["Actual"],
-        label="Actual",
-        color="blue"
+    [Y_test.min(), Y_test.max()],
+    [Y_test.min(), Y_test.max()],
+    color="red"
     )
-
-    #Plotting the predicted values linearly
-    plt.plot(
-        results["Date"],
-        results["Predicted"],
-        label="Predicted",
-        color="red"
-    )
-
-    plt.xlabel("Date")
-    plt.ylabel("Average Temperature")
+    plt.xlabel("Actual Temperature")
+    plt.ylabel("Predicted Temperature")
     plt.title("Actual vs Predicted Temperatures")
 
-    plt.legend()
-    plt.xticks(rotation=45)
     plt.show()
 
 def corr_heatmap(df):
